@@ -23,6 +23,7 @@ import { FormsModule} from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
+      {path:'', redirectTo:'/welcome-page',pathMatch:'full'},
       {path:'champions', component: ChampionsComponent},
       {path:'items', component: ItemsComponent},
       {path:'welcome-page', component:WelcomePageComponent}

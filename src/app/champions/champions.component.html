@@ -1,17 +1,19 @@
-<div class="sidesection">
-    <div class="displaychamps">
-        Champions:
-        <ul class="heroes">
-            <li class="heroeshover" *ngFor="let Champ of Champ" (click)="onSelectChamp(Champ)"> {{Champ.name}} <br></li>
-        </ul>
+<div class="champsection">
+    <div class="sidesection">
+        <div class="displaychamps">
+            <span>Champions:</span>
+            <ul class="heroes">
+                <li class="heroeshover" *ngFor="let Champ of Champ" (click)="onSelectChamp(Champ)"> {{Champ.name}} <br></li>
+            </ul>
+        </div>
     </div>
-</div>
-<div class="selectedchampnav">
-    <div *ngIf="selectedChamp">
-        <h2> Details about selected champion:</h2>
-        <div class="selectedchampinfo"><span>Name: </span>{{selectedChamp.name}}<br>
-            <span>Role: {{selectedChamp.role}} </span> <br>
-            <span id="gender">Gender: {{ showGender() }}</span>
+    <div class="selectedchampnav">
+        <div *ngIf="selectedChamp">
+            <h2> Details:</h2>
+            <div class="selectedchampinfo"><span>Name: </span>{{selectedChamp.name}}<br>
+                <span>Role: {{selectedChamp.role}} </span> <br>
+                <span id="gender">Gender: {{ showGender() }}</span>
+            </div>
         </div>
     </div>
 </div>
