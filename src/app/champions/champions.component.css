@@ -1,0 +1,35 @@
+.heroes {
+    color: white;
+    size: 200px;
+}
+
+.heroes li {
+    margin: 5px;
+    transform-style: preserve-3d;
+}
+
+.displaychamps {
+    margin: 25px;
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+    color: white;
+    justify-items: center;
+}
+
+.heroes li:hover {
+    margin: 5px;
+    color: rgba(255, 94, 94, 1);
+    cursor: pointer;
+}
+
+.sidesection {
+    background-color: rgba(7, 18, 26, 1);
+    width: fit-content;
+}
+
+.selectedchampnav {
+    margin: 30px;
+    padding: 30px;
+    justify-items: auto;
+}

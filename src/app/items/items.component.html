@@ -1,0 +1,16 @@
+<div class="sidesection">
+    <div class="displayitems">
+        Items:
+        <ul class="items">
+            <li class="itemshover" *ngFor="let items of itemlist" (click)="onSelectedItem(items)">{{items.name}}<br> </li>
+        </ul>
+    </div>
+</div>
+<div class="selecteditemnav">
+    <div *ngIf="selectedItem">
+        <h2> Details about selected item:</h2>
+        <div class="selectediteminfo"><span>Name: </span>{{selectedItem.name}}<br>
+            <span>Quality: {{ selectedItem.quality }}</span>
+        </div>
+    </div>
+</div>
