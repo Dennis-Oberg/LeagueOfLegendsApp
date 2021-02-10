@@ -8,8 +8,8 @@ import { ChampionsComponent } from './champions/champions.component';
 import { ItemsComponent } from './items/items.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
-import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
@@ -20,14 +20,14 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     ChampionsComponent,
     ItemsComponent,
     PageNotFoundComponent,
-    WelcomePageComponent,AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule,
-    AngularFirestoreModule
-    
+    WelcomePageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
     RouterModule.forRoot([
       {path:'', redirectTo:'/welcome-page',pathMatch:'full'},
       {path:'champions', component: ChampionsComponent},

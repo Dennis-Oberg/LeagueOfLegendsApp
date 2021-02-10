@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {CHAMPIONS} from '../champsfornow';
 import {Champ} from '../champinterface';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AppModule } from '../app.module';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -13,6 +13,7 @@ import { AppModule } from '../app.module';
 export class ChampionsComponent implements OnInit {
 
 
+  Champions: Observable<any[]>;
 
   Champ = CHAMPIONS;
   selectedChamp: Champ;
@@ -27,8 +28,9 @@ export class ChampionsComponent implements OnInit {
     this.selectedChamp = champ;
     
   }
-  constructor(private afs: AngularFirestoreModule) { 
-
+  constructor(private afs:AngularFirestore ) { 
+    const idk = this.Champions = afs.collection('Champions').valueChanges();
+console.log(idk);
   }
 
   ngOnInit(): void {
