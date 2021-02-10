@@ -26,9 +26,11 @@
 }
 
 .sidesection {
-    background-color: rgba(7, 18, 26, 1);
+    background-color: rgba(42, 51, 73, 1);
     width: 350px;
     height: auto;
+    vertical-align: middle;
+    justify-items: center;
 }
 
 .selecteditemnav {
@@ -40,7 +42,40 @@
 .itemsection {
     padding: 50px;
     color: white;
-    background-color: rgba(7, 18, 26, 1);
-    width: 350px;
+    background-color: rgba(42, 51, 73, 1);
+    width: auto;
     height: auto;
+    display: flex;
+}
+
+.topsection h1 {
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.selectediteminfo li,
+h2 {
+    padding: 10px;
+    margin: 10px;
+}
+
+.topsection {
+    background-color: rgba(42, 51, 73, 1);
+    height: 780px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+p {
+    font-family: 'Bungee', cursive;
+    font-size: 32px;
+    color: white;
+}
+
+#mainitemtext {
+    line-height: 150px;
+    margin: auto;
+    vertical-align: middle;
 }
