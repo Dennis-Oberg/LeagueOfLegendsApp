@@ -8,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomePageComponent implements OnInit {
 
+  showLeagueObjects()
+  {
+    var x = document.getElementById("container");
+    x.className = "leagueContainer--show";
+  }
+
   constructor() { }
 
   ngOnInit(): void {
@@ -16,3 +22,5 @@ export class WelcomePageComponent implements OnInit {
 
 
 }
+
+
