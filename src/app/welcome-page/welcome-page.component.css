@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
+.WelcomeWrapper{
+    background-image: url("C:\Users\gusta\Documents\GitHub\LeagueOfLegends\src\assets\welcome.jpg");
+    background-size: cover;
+    background-position: center; 
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.WelcomeText {
+    background-color: rgb(255,94,94);
+    padding: 25px;
+    margin: 50px 0px 50px 20%;
+    width: 20%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.leagueContainer
+{
+    background-color: rgba(42, 51, 73, 1);
+    margin: 50px;
+    padding: 100px;
+    height: 1000px;
+    visibility: hidden;
+    opacity: 0;
+    
+    transition:
+    opacity 500ms linear,
+    visibility 0s linear 500ms;
+}
+
+.leagueContainer--show {
+    background-color: rgba(42, 51, 73, 1);
+    margin: 50px;
+    padding: 100px;
+    height: 1000px;
+    opacity: 1;
+    visibility: visible;    
+    
+    transition:
+      opacity 500ms linear,
+      visibility 0s linear;
+  }
+
+.LeagueObjects {
+    display: grid; 
+    background-color: rgba(42, 51, 73, 1);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 75px;
+    justify-content: space-evenly;
+    margin: 50px;
+    height: 500px;
+}
+
+.textDiv {
+    display: grid; 
+    justify-content: center;
+    align-items: center;
+    color:white;
+    text-align: left;
+    font-size: 24px;
+}
+
+.grid-item {
+    font-size: 30px;
+    color: white;
+    transition: all 0.3s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid gold;
+    box-shadow: gold 0px 0px 4px;
+    transition-duration: 0.3s;
+    transition-property: box-shadow;
+}
+
+.grid-item:hover, .grid-item:focus, .grid-item:active {
+    box-shadow: 0 0 20px gold;
+    cursor: pointer;
+  }
+
+.grid-item p {
+    background-color: rgb(255,94,94);
+    padding: 10px;
+    box-shadow: black 0px 0px 6px;
+    border-radius: 10px;
+}
+
+#champions {
+    background-image: url("C:\Users\gusta\Documents\GitHub\LeagueOfLegends\src\assets\champions.jpg");
+    background-size: cover;
+    background-position: center; 
+}
+
+#runes {
+    background-image: url("C:\Users\gusta\Documents\GitHub\LeagueOfLegends\src\assets\runes.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#spells {
+    background-image: url("C:\Users\gusta\Documents\GitHub\LeagueOfLegends\src\assets\spells.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#items {
+    background-image: url("C:\Users\gusta\Documents\GitHub\LeagueOfLegends\src\assets\items.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#minions {
+    background-image: url("C:\Users\gusta\Documents\GitHub\LeagueOfLegends\src\assets\minions.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#monsters {
+    background-image: url("C:\Users\gusta\Documents\GitHub\LeagueOfLegends\src\assets\monsters.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#maps {
+    background-image: url("C:\Users\gusta\Documents\GitHub\LeagueOfLegends\src\assets\maps.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#modes {
+    background-image: url("C:\Users\gusta\Documents\GitHub\LeagueOfLegends\src\assets\modes.png");
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    color: White;
+    font-size:24px;
+}
+
+Button {
+    color: white;
+    padding: 25px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-family: 'Comfortaa', cursive;
+    background-color: rgb(42,51,73);
+}
+
+Button:hover {
+    cursor: pointer;
+    color: rgb(255,94,94);
+    transition-duration: 0.3s;
+}
+
+
+.LeagueOfLegendsTitle {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+  
