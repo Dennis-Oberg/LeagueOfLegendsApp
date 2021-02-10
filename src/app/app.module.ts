@@ -8,7 +8,10 @@ import { ChampionsComponent } from './champions/champions.component';
 import { ItemsComponent } from './items/items.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
-import { FormsModule} from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 
 @NgModule({
@@ -17,7 +20,10 @@ import { FormsModule} from '@angular/forms';
     ChampionsComponent,
     ItemsComponent,
     PageNotFoundComponent,
-    WelcomePageComponent
+    WelcomePageComponent,AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule
+    
   ],
   imports: [
     BrowserModule,

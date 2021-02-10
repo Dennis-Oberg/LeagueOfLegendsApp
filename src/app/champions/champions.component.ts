@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {CHAMPIONS} from '../champsfornow';
 import {Champ} from '../champinterface';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AppModule } from '../app.module';
 
 
 @Component({
@@ -25,7 +27,9 @@ export class ChampionsComponent implements OnInit {
     this.selectedChamp = champ;
     
   }
-  constructor() { }
+  constructor(private afs: AngularFirestoreModule) { 
+
+  }
 
   ngOnInit(): void {
   }
