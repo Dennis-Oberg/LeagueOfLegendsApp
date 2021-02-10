@@ -1,0 +1,23 @@
+footer {
+    font-family: 'Bungee', cursive;
+    font-size: 20px;
+    color: rgba(255, 94, 94, 1);
+    position: absolute;
+    padding: 30px;
+    bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(80, 145, 74);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
