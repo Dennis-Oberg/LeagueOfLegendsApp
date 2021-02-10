@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
 
 .WelcomeWrapper{
-    background-image: url("C:\Users\gusta\Documents\GitHub\LeagueOfLegends\src\assets\welcome.jpg");
+    background-image: url("https://i.ibb.co/JKbJBZL/welcome.jpg");
     background-size: cover;
     background-position: center; 
     display: flex;
@@ -90,49 +90,49 @@
 }
 
 #champions {
-    background-image: url("C:\Users\gusta\Documents\GitHub\LeagueOfLegends\src\assets\champions.jpg");
+    background-image: url("https://i.ibb.co/1R5GXJT/champions.jpg");
     background-size: cover;
     background-position: center; 
 }
 
 #runes {
-    background-image: url("C:\Users\gusta\Documents\GitHub\LeagueOfLegends\src\assets\runes.jpg");
+    background-image: url("https://i.ibb.co/8X0mK3n/runes.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #spells {
-    background-image: url("C:\Users\gusta\Documents\GitHub\LeagueOfLegends\src\assets\spells.png");
+    background-image: url("https://i.ibb.co/MNzM5Ts/spells.png");
     background-size: cover;
     background-position: center;
 }
 
 #items {
-    background-image: url("C:\Users\gusta\Documents\GitHub\LeagueOfLegends\src\assets\items.png");
+    background-image: url("https://i.ibb.co/K0wNNrk/items.png");
     background-size: cover;
     background-position: center;
 }
 
 #minions {
-    background-image: url("C:\Users\gusta\Documents\GitHub\LeagueOfLegends\src\assets\minions.jpg");
+    background-image: url("https://i.ibb.co/JRrgtxy/minions.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #monsters {
-    background-image: url("C:\Users\gusta\Documents\GitHub\LeagueOfLegends\src\assets\monsters.jpg");
+    background-image: url("https://i.ibb.co/rpXTFFR/monsters.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #maps {
-    background-image: url("C:\Users\gusta\Documents\GitHub\LeagueOfLegends\src\assets\maps.png");
+    background-image: url("https://i.ibb.co/N318kn9/maps.png");
     background-size: cover;
     background-position: center;
 }
 
 #modes {
-    background-image: url("C:\Users\gusta\Documents\GitHub\LeagueOfLegends\src\assets\modes.png");
+    background-image: url("https://i.ibb.co/gtqh87v/modes.png");
     background-size: cover;
     background-position: center;
 }
