@@ -62,6 +62,7 @@ body {
     line-height: 150px;
     margin: auto;
     vertical-align: middle;
+    text-shadow: 2px 4px 8px #000000;
 }
 
 .selectedchampinfo li,
@@ -89,6 +90,7 @@ p {
     font-family: 'Bungee', cursive;
     font-size: 32px;
     color: white;
+    text-shadow: 2px 4px 8px #000000;
 }
 
 input {

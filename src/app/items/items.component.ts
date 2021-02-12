@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ITEMS } from '../itemsfornow';
-import {Item} from '../itemsinterface';
+import { itemclass } from '../itemclass';
+import { FormsModule} from '@angular/forms';
+import { AngularFireModule } from 'angularfire2';
+//import { AngularFirestoreModule} from 'angularfire2/database'
+import { Observable } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore';
+
+
+
 
 @Component({
   selector: 'app-items',
@@ -9,15 +16,26 @@ import {Item} from '../itemsinterface';
 })
 export class ItemsComponent implements OnInit {
 
-  itemlist = ITEMS;
-  selectedItem: Item;
-  constructor() { }
 
-  ngOnInit(): void {
-  }
-  onSelectedItem(item: Item):void{
-    this.selectedItem = item;
+ items$: Observable<any[]>;
+ newitemclass;
+
+  constructor(afs: AngularFirestore) { 
+    this.items$ = afs.collection('Items').valueChanges();
     
   }
+
+  ngOnInit(): void {
+   
+  }
+  addItem(){
+    //this.items.push(this.items);
+  
+    
+  }
+  onSubmit(e) {
+    e.preventDefault();
+    }
+    
 
 }

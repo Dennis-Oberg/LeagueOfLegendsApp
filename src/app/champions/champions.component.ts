@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {CHAMPIONS} from '../champsfornow';
-import {Champ} from '../champinterface';
+
+import { Champ } from '../champclass';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { FireBaseService, IChampion } from '../services/fire-base.service';
+import { map } from 'rxjs/operators';
+
 
 
 @Component({
@@ -12,29 +16,41 @@ import { Observable } from 'rxjs';
 })
 export class ChampionsComponent implements OnInit {
 
-
-  Champions: Observable<any[]>;
-
-  Champ = CHAMPIONS;
-  selectedChamp: Champ;
- 
-  showGender() : string{
-    if (this.selectedChamp.isMale){
-       return 'Male';
-    } else
-    return 'Female';
-  }
-  onSelectChamp(champ: Champ):void{
-    this.selectedChamp = champ;
+  
+  public champdetails: IChampion;
+  public championslist: Observable<any[]>;
+  
+  constructor(private af: AngularFirestore) { 
     
+      this.championslist = af.collection('Champions').snapshotChanges().pipe(
+        map(j => j.map(
+        a => {
+        const data = a.payload.doc.data() as Champ;
+        const id = a.payload.doc.id;
+        return {id, ...data};
+        
+        }
+        
+        ))
+        
+        );
+        
+        
   }
-  constructor(private afs:AngularFirestore ) { 
-    const idk = this.Champions = afs.collection('Champions').valueChanges();
-console.log(idk);
-  }
+
+ 
+
+ getChampion(): Observable<Champ[]> {
+   return this.championslist;
+ }
+
+ addChampion(c: Champ){
+  this.af.collection('Champions').add(c);
+ }
 
   ngOnInit(): void {
+   
   }
-  
 
+ 
 }

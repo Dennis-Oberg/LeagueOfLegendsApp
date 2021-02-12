@@ -10,8 +10,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+
+
 
 
 @NgModule({
@@ -28,6 +30,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
+  
     RouterModule.forRoot([
       {path:'', redirectTo:'/welcome-page',pathMatch:'full'},
       {path:'champions', component: ChampionsComponent},

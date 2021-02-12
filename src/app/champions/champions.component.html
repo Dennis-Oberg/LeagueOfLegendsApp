@@ -4,33 +4,29 @@
         <div class="sidesection">
             <p>Select a Champion</p>
             <div class="displaychamps">
+                <ul class="heroes" *ngFor="let champ of championslist">
+                    <li>{{ championslist }}</li>
 
-                <ul class="heroes">
-                    <li class="heroeshover" *ngFor="let Champ of Champ" (click)="onSelectChamp(Champ)"> {{Champ.name}} <br></li>
                 </ul>
+
             </div>
         </div>
 
         <div class="selectedchampnav">
-            <div *ngIf="selectedChamp">
-                <h2> Details:</h2>
-                <div class="selectedchampinfo">
-                    <li> Name: {{selectedChamp.name}}</li>
-                    <li>Role: {{selectedChamp.role}}</li>
-                    <li id="gender">Gender: {{ showGender() }}</li>
-                    <li>Healthpool: {{selectedChamp.hp}}</li>
-                    <li>Origin: {{selectedChamp.origin}}</li>
-                    <li>Quote: {{selectedChamp.quote}}</li>
-                </div>
+
+            <h2> Details:</h2>
+            <div class="selectedchampinfo">
+
             </div>
+
         </div>
     </div>
     <div class="input">
         <form action="">
             <button class="buttons" mat-raised-button>Insert Champion</button>
             <button class="buttons" mat-raised-button>Delete Champion</button>
-
         </form>
+
 
     </div>
 </div>
