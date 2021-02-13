@@ -3,12 +3,27 @@
     size: 100px;
 }
 
-.items li {
-    margin: 10px;
+.inputform label {
+    font-family: 'Bungee', cursive;
+    font-size: 16px;
+    color: white;
+    text-shadow: 2px 4px 8px #000000;
+    padding: 4px;
 }
 
-.displayitems span {
-    font-size: 28px;
+span {
+    font-family: 'Bungee', cursive;
+    font-size: 12px;
+    color: white;
+    text-shadow: 2px 4px 8px #000000;
+}
+
+.items li,
+span {
+    list-style: circle;
+    font-family: 'Bungee', cursive;
+    font-size: 12px;
+    color: white;
 }
 
 .displayitems {
@@ -70,14 +85,16 @@ h2 {
     border-radius: 10px;
 }
 
-p {
+.sidesection p {
     font-family: 'Bungee', cursive;
-    font-size: 32px;
+    font-size: 12px;
     color: white;
+    text-shadow: 2px 4px 8px #000000;
 }
 
 #mainitemtext {
     line-height: 150px;
     margin: auto;
     vertical-align: middle;
+    text-shadow: 2px 4px 8px #000000;
 }

@@ -4,20 +4,37 @@
         <div class="sidesection">
             <p>Select an item</p>
             <div class="displayitems">
+                <div class="items">
+                    <ul>
+                        <li *ngFor="let item of items$ | async">
+                            <p>Name: {{item.Name}} <br>Cost: {{item.Cost}} </p>
+                            <span *ngIf="item.cost >= 100">Cheap item</span>
+                            <span *ngIf="item.cost < 100">Expensive Item</span>
+                        </li>
+                    </ul>
+                    <ng-template #noitems><span>No items were found</span><br>
+                        <span>Add an item</span>
+                        <div class="inputform">
+                            <form (submit)="onSubmit($event)">
+                                <label>Name:</label>
+                                <input type="text" [(ngModel)]="newitemclass" name="name" />
+                                <label>Quality:</label>
+                                <input type="text" [(ngModel)]="newitemclass" name="quality">
+                                <label>Cost:</label>
+                                <input type="text" [(ngModel)]="newitemclass" name="cost">
+                                <button (click)="addItem()">Send it away</button>
+                            </form>
 
-                <ul class="items">
-                    <li class="itemshover" *ngFor="let items of itemlist" (click)="onSelectedItem(items)">{{items.name}}<br> </li>
-                </ul>
+                        </div>
+
+                    </ng-template>
+
+                </div>
+
             </div>
         </div>
         <div class="selecteditemnav">
-            <div *ngIf="selectedItem">
-                <h2> Details :</h2>
-                <div class="selectediteminfo">
-                    <li> Name: {{selectedItem.name}}</li>
-                    <li> Quality: {{ selectedItem.quality }}</li>
-                </div>
-            </div>
+
         </div>
     </div>
 </div>
