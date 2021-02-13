@@ -81,7 +81,9 @@ h2 {
 .topsection {
     background-color: rgba(42, 51, 73, 1);
     height: 780px;
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
     border-radius: 10px;
 }
 
