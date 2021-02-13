@@ -12,6 +12,7 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { ApploginComponent } from './applogin/applogin.component';
 
 
 
@@ -23,6 +24,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     ItemsComponent,
     PageNotFoundComponent,
     WelcomePageComponent,
+    ApploginComponent,
   ],
   imports: [
     BrowserModule,
