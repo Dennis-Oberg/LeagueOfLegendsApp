@@ -18,7 +18,7 @@ export class ItemsComponent implements OnInit {
 
 
  items$: Observable<any[]>;
- newitemclass;
+
 
   constructor(afs: AngularFirestore) { 
     this.items$ = afs.collection('Items').valueChanges();
