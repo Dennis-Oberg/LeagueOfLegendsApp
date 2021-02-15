@@ -1,0 +1,8 @@
+<div class="addorremoveitems">
+    <form (submit)="onSubmit($event)">
+        <label>Name</label><br>
+        <input type="text" ngModel="newItem.Name" name="Name" /><br/><br/>
+        <label>Cost</label><br/>
+        <input type="text" name="Cost" /><br/><br/>
+        <button>Submit</button>
+    </form>

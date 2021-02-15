@@ -1,3 +1,8 @@
+body {
+    height: 100%;
+    color: rgba(7, 18, 26, 1);
+}
+
 .items {
     color: white;
     size: 100px;
@@ -78,11 +83,17 @@ h2 {
     margin: 10px;
 }
 
+.addorremoveitems {
+    position: relative;
+}
+
 .topsection {
     background-color: rgba(42, 51, 73, 1);
     height: 780px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
     border-radius: 10px;
-    font-size: 16px;
 }
 
 .sidesection p {
