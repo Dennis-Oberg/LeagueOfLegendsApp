@@ -18,6 +18,7 @@ export class ItemsComponent implements OnInit {
 
 
  items$: Observable<any[]>;
+ item: Observable<any[]>;
 
 
   constructor(afs: AngularFirestore) { 
@@ -28,14 +29,11 @@ export class ItemsComponent implements OnInit {
   ngOnInit(): void {
    
   }
-  addItem(){
-    //this.items.push(this.items);
-  
-    
+  addItem(item: itemclass){
+   
   }
-  onSubmit(e) {
-    e.preventDefault();
-    }
+
+  
     
 
 }

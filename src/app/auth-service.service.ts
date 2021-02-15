@@ -9,13 +9,13 @@ import { map } from 'rxjs/operators'
 export class AuthServiceService {
 
   constructor(private afAuth: AngularFireAuth) {
-   login 
+  
    
   }
    getAuth() {
     return this.afAuth.authState.pipe(map(auth => auth));
     }
     login(){
-      
+
     }
 }

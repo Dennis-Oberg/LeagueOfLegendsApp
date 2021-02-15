@@ -13,6 +13,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { ApploginComponent } from './applogin/applogin.component';
+import { AddChampionComponent } from './add-champion/add-champion.component';
+import { AddItemComponent } from './add-item/add-item.component';
 
 
 
@@ -25,6 +27,8 @@ import { ApploginComponent } from './applogin/applogin.component';
     PageNotFoundComponent,
     WelcomePageComponent,
     ApploginComponent,
+    AddChampionComponent,
+    AddItemComponent,
   ],
   imports: [
     BrowserModule,

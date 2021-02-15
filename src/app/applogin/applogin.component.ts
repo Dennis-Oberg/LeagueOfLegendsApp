@@ -24,9 +24,6 @@ export class ApploginComponent implements OnInit {
   }
 
   onSubmit(){
-    this.authService.login(this.email, this.password)
-    .then(res => {
-      this.router.navigate(['/']);
-    })
+    
   }
 }

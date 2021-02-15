@@ -5,25 +5,26 @@ import { map } from 'rxjs-compat/operator/map';
 import { Champ } from '../champclass';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class FireBaseService {
 
 
-  public championslist: Observable<any[]>;
+   championslist$: Observable<any[]>;
 
 
   constructor(private firestore: AngularFirestore) { 
-    
+    this.championslist$ = firestore.collection('Champion').valueChanges();
   }
   getChampion(): Observable<Champ[]>{
-    return this.championslist;
+    return this.championslist$;
   }
-  addChampion(payload: IChampion){
+  addChampion(payload: Champ){
     return this.firestore.collection("Champions").add(payload);
   }
-  updateChampion(champname: string, payload: IChampion){
+  updateChampion(champname: string, payload: Champ){
     return this.firestore.doc('Champions/' + champname).update(payload);
   }
   deleteEmployee(champname: string){
@@ -31,8 +32,3 @@ export class FireBaseService {
   }
 }
 
-export interface IChampion{
-  name?: string;
-  id: number;
-
-}

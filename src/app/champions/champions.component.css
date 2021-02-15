@@ -3,13 +3,18 @@ body {
     color: rgba(7, 18, 26, 1);
 }
 
-.heroes {
+.herolist {
     color: white;
     size: 100px;
 }
 
-.heroes li {
-    margin: 10px;
+.heroes li,
+span,
+p {
+    list-style: circle;
+    font-family: 'Bungee', cursive;
+    font-size: 16px;
+    color: white;
 }
 
 .displaychamps span {
@@ -38,6 +43,14 @@ body {
     justify-items: center;
 }
 
+.sidesection p {
+    font-family: 'Bungee', cursive;
+    font-size: 16px;
+    color: white;
+    text-shadow: 2px 4px 8px #000000;
+    margin: 4px;
+}
+
 .selectedchampnav::content {
     background-color: rgb(100, 134, 158);
     margin: 20px;
@@ -55,6 +68,7 @@ body {
     color: white;
     background-color: rgba(42, 51, 73, 1);
     width: auto;
+    height: auto;
     display: flex;
 }
 
@@ -86,13 +100,6 @@ h2 {
     margin-right: 10px;
     margin-top: 10px;
     border-radius: 10px;
-}
-
-p {
-    font-family: 'Bungee', cursive;
-    font-size: 32px;
-    color: white;
-    text-shadow: 2px 4px 8px #000000;
 }
 
 input {

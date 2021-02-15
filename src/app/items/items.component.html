@@ -8,17 +8,16 @@
                     <ul>
                         <li class="itemlist" *ngFor="let item of items$ | async">
                             <p>Name: {{item.Name}} <br>Cost: {{item.Cost}} </p>
-                            <span *ngIf="item.cost >= 100">Cheap item</span>
-                            <span *ngIf="item.cost < 100">Expensive Item</span>
                         </li>
                     </ul>
-
+                    <button onclick="">Add Item</button>
                 </div>
+
 
             </div>
         </div>
-        <div class="selecteditemnav">
+    </div>
+    <div class="selecteditemnav">
 
-        </div>
     </div>
 </div>
